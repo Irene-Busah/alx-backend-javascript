@@ -4,3 +4,4 @@ package.json
 .eslintrc.json
 babel.config.js
 node_modules
+0-main.js
