@@ -1,10 +1,9 @@
 export default class Currency {
-  constructor (code, name) {
-    Currency.checkType(name, 'string', `${name} must be a string`);
-    this._name = name;
-
-    Currency.checkType(code, 'string', `${code} code must be a number`);
+  constructor(code, name) {
+    Currency.checkType(code, 'string', `${code} not of string type`);
     this._code = code;
+    Currency.checkType(name, 'string', `${name} not of string type`);
+    this._name = name;
   }
 
   // Getter methods
@@ -16,7 +15,7 @@ export default class Currency {
     return this._name;
   }
 
-  // Setter method
+  // Setter methods
   set code(newCode) {
     Currency.checkType(newCode, 'string', `${newCode} not of type string`);
     this._code = newCode;
@@ -27,7 +26,7 @@ export default class Currency {
     this._code = newName;
   }
 
-  // static method
+  // Static method
   static checkType(arg, type, errMsg) {
     /**
       * Throw error if `arg` is not of type `type`
