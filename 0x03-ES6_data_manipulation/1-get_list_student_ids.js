@@ -1,9 +1,9 @@
-/* Eslint-disabled */
-export default function getListStudentIds(arrayItems) {
-  if (!Array.isArray(arrayItems)) {
-    return [];
+/* eslint-disable */
+export default function getListStudentIds(arrayArg) {
+  if (!Array.isArray(arrayArg)) {
+      return [];
   }
-  return arrayItems.map((item) => {
-    return item.id;
+  return arrayArg.map((item) => {
+      return item.id;
   });
 };
