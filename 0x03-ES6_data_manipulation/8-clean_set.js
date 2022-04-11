@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
-  for (const element of set) {
-    if (element.indexOf(startString)) {
-      return element;
-    }
-  }
+  if (!startString || typeof startString !== 'string' || typeof set !== 'object') return '';
+  return [...set]
+    .filter((el) => el.startsWith(startString))
+    .map((el) => el.slice(startString.length))
+    .join('-');
 }
